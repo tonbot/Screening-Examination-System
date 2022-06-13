@@ -17,6 +17,6 @@
 
 <div class="navbarr shadow-sm py-2 bg-white">
      <ul>
-        <li><img src="resources/images/ekirs.png" alt=""  width="60px" height="auto"> <span class="ekiti">Ekiti Internal revenue Service</span></li>            
+        <li><img src="resources/images/ekirs.png" alt=""  width="60px" height="auto"> <span class="ekiti">Ekiti Internal revenue Service</span><span class="ml-5" hidden><button class="btn btn-danger ml-5" id="logout">Logout</button></span></li>            
      </ul>
  </div>

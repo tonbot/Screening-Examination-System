@@ -9,7 +9,7 @@ CREATE TABLE `question_tbl` (
   `correct_opt` tinyint(1) NOT NULL,
   `section` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1
+);
 
 
 CREATE TABLE `result_tbl` (
@@ -26,7 +26,7 @@ CREATE TABLE `result_tbl` (
   `remark` varchar(11) DEFAULT NULL,
   `entry_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1
+); 
 
 
 CREATE TABLE `user` (
@@ -37,7 +37,7 @@ CREATE TABLE `user` (
   `gender` varchar(25) NOT NULL,
   `phone` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
+); 
 
 
 CREATE TABLE `admin_tbl` (
@@ -45,4 +45,4 @@ CREATE TABLE `admin_tbl` (
   `username` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1
+); 

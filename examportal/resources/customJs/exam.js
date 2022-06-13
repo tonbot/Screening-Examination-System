@@ -253,6 +253,15 @@ $(function () {
                 $("#total_question").text(question_list.length)
                 //display quetion and option
                 display_question()
+
+                if ($("#section1").hasClass('active')) {
+                    $("#section1").removeClass('active');
+                } else {
+                    $("#section1").addClass('active');
+                    $("#section2").removeClass('active');
+                    $("#section3").removeClass('active');
+                    $("#section4").removeClass('active');
+                }
             },
             error: function (error) { /**on error function */
                 console.log(error)

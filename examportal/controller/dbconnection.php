@@ -85,7 +85,7 @@ public function computes($data3) {
       //calculate total score
       $total_score = $section_scoreA + $section_scoreB + $section_scoreC + $section_scoreD;
       //calculate total question 
-      $total_question =  $tqA +  $tqA +  $tqA +  $tqA;
+      $total_question =  $tqA +  $tqB +  $tqC +  $tqD;
 
        //calculate score total score percentage
        $score_pcent =  $total_score <= 0 ? $score_pcent : (($total_score * 100) /  $total_question);

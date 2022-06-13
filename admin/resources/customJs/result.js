@@ -3,7 +3,12 @@ $(document).ready(function() {
     $("#row").hide(); 
     var table;
     var table2;
-  
+
+    $("#logout").click(function(){
+        location.href = "logout.php";
+    });
+   
+    
     //hide row 
   
     //datable

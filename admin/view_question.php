@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKIRS ADMIN</title>
-    <link rel="shortcut icon" href="resources/imageS/ekirs.ico">
+    <link rel="shortcut icon" href="resources/images/ekirs.ico">
     <!-- custom resources -->
     <link rel="stylesheet" href="resources/customCss/result.css">
     <script src="resources/customJs/result.js"></script>

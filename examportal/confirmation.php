@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKIRS CBT</title>
-    <link rel="shortcut icon" href="resources/imageS/ekirs.ico">
+    <link rel="shortcut icon" href="resources/images/ekirs.ico">
       <!-- custom resources -->
       <link rel="stylesheet" href="resources/customCss/confirmation.css">
       <script src="resources/customJs/confirmation.js"></script>
@@ -86,7 +86,7 @@
                 <h5 class="modal-title" id="my-modal-title">Instruction</h5>
             </div>
             <div class="modal-body">
-                <p>mknfdknksdfl;dflsfd</p>
+                <p>Kindly note that there are four sections, each section with 10 questions. You are required to attempt all the questions. Good luck.</p>
             </div>
             <div class="modal-footer">
                 <button class=" btn btn-danger continue shadow">Continue To Exam <i class="continue-arrow fas fa-long-arrow-alt-right"></i></button>

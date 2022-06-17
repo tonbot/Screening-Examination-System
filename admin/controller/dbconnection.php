@@ -113,6 +113,23 @@ function delete_question($question_id){
     }
 }
 
+
+function retake($p){
+    $response = new stdClass();
+    $query  = "DELETE FROM result_tbl WHERE phone = :phone";
+    $result = $this->pdo->prepare($query);
+    $result->execute
+        ([
+            ':phone' => $p,
+        ]);
+    if($result->rowCount() > 0){
+        $response -> data = "true";
+        return $response;
+    }else{
+        $response -> data = "false";
+        return $response;
+    }
+}
 /** validate database response */
 private function validateResponse($result){
     if ($result -> rowCount() > 0)

@@ -41,6 +41,19 @@ public function login($s, $p) {
     
 }
 
+public function check($p) {    
+    $query  = "SELECT * FROM result_tbl WHERE phone=:phone";
+    $result = $this->pdo->prepare($query);
+    $result->execute
+        ([
+            ':phone'   => $p,
+        ]);
+    return $this->validateResponse($result);
+    
+}
+
+
+
  /** get in come */
  public function get_question() {    
      $question_array = new stdClass();

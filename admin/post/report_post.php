@@ -74,6 +74,11 @@ try
                         
                             }
                             break;
+                        case "re": 
+                                $p = $_POST['p'];
+                                $result = $connection -> retake($p);
+                                echo json_encode($result);
+                                break;
                          case "de": 
                                     $question_id = $_POST['question_id'];
                                     $result= $connection -> delete_question($question_id);

@@ -14,7 +14,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKIRS ADMIN</title>
-    <link rel="shortcut icon" href="resources/imageS/ekirs.ico">
+    <link rel="shortcut icon" href="resources/images/ekirs.ico">
+    <link rel="stylesheet" href="resources/customCss/report.css">
+    <script src="resources/customJs/index.js"></script>
 </head>
 <body>
     <!-- header section -->
@@ -53,7 +55,7 @@
                              <h6>View Result</h6>
                          </div>
                          <div class="card-body text-center">
-                           <p class="card-text">you can view all exam reports here</p>
+                           <p class="card-text">you can view and download in any format exam report here</p>
                            <a href="result.php" class="btn btn-primary">Proceed</a>
                          </div>
                      </div>
@@ -61,11 +63,11 @@
                  <div class="col-sm-3">
                      <div class="card" disabled="disabled">
                          <div class="card-header">
-                             <h6>Edit Question</h6>
+                             <h6>Exam Retake/h6>
                          </div>
                          <div class="card-body text-center">
-                           <p class="card-text">You can add as many quetion you want here</p>
-                           <a href="#" class="btn btn-primary">Proceed</a>
+                           <p class="card-text">You can allow canditate to retake exam here</p>
+                           <a href="#" class="btn btn-primary open">Proceed</a>
                          </div>
                      </div>
                  </div>
@@ -73,5 +75,32 @@
              </div>
          </div>
      </main>
+
+     <script>
+        $(".open").click(function(){
+           $("#my-modal").modal("show");
+        });
+     </script>
+
 </body>
 </html>
+<div id="my-modal" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="my-modal-title">Allow Exam Retake</h5>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-primary" role="alert">
+                   Enter below the phone number of the candidate to allow the retake of the exam
+                </div>
+                <div id="message"></div>
+                <p><input class="form-control" type="number" id="phones" placeholder="Enter phone number"></p>
+                <p class="text-right"><button class="btn btn-danger allow">Allow</button></p>
+            </div>
+        </div>
+    </div>
+</div>

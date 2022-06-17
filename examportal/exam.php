@@ -1,11 +1,20 @@
 <?php 
     session_start();
-    if( !isset($_SESSION['a']) ){
+    if( !isset($_SESSION['a']) || !isset($_SESSION['b']) || !isset($_SESSION['d'])){
         header("Location: logout.php");
         exit();
     }
-    # including bootstrap resources 
-   include_once('resources/include.php');
+     else{
+    include_once "controller/dbconnection.php";
+    $connection=new dbconnection;
+    $check = $connection -> check($_SESSION['d']);
+    if($check != 0 ){
+        header("Location: error.php");
+        exit();
+    }   
+}
+# including bootstrap resources 
+include_once('resources/include.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKIRS CBT</title>
-    <link rel="shortcut icon" href="resources/imageS/ekirs.ico">
+    <link rel="shortcut icon" href="resources/images/ekirs.ico">
     <!-- custom resources -->
     <link rel="stylesheet" href="resources/customCss/exam.css">
     <script src="resources/customJs/exam.js"></script>
@@ -39,7 +48,7 @@
                         <a href="#" class="btn btn-primary mb-2" id="section2">Section 2</a>
                         <a href="#" class="btn btn-primary mb-2" id="section3">Section 3</a>
                         <a href="#" class="btn btn-primary mb-2" id="section4">Section 4</a>
-                        <a href="#" class="btn btn-danger mb-2"  id="submit_mobile">Submit</a>
+                        <!-- <a href="#" class="btn btn-danger mb-2"  id="submit_mobile">Submit</a> -->
                     </div>
                 </div>
                 <h5 class="card-title text-center pt-3 mobile_score" >Total Score : <span id="score_mobile" ></span></h5>
@@ -59,10 +68,10 @@
             <div class="container bg-light shadow container1">
                 <div class="title_container row">
                     <div class="col-sm-6">
-                        <h4 id="track">Question <span id=current_question></span> of <span id=total_question></span>    </h4>
+                        <h4 id="track"> Question <span id=current_question></span> of <span id=total_question></span>    </h4>
                     </div>
                     <div class="col-sm-6 ">
-                        <h4 class="text-right" id=timer><span id=minute>10</span> : <span id=second>60</span>  </h4>
+                        <h4 class="text-right" id=timer>Time-left : <span id=minute>10</span> : <span id=second>60</span>  </h4>
                     </div>
                 </div>
                 <div class="row">
@@ -79,9 +88,10 @@
                         </div>
                         <p class="hr"><hr/></p>
                         <div class="row rowbtn">
-                            <div class="col-sm-6">
+                            <div class="col-sm-9">
                                 <button class="shadow mr-3" id="previous"><i class="fa fa-angle-left"></i> Previous</button>
-                                <button class="shadow" id="next" >Next <i class="fa fa-angle-right"></i></button>
+                                <button class="shadow  mr-3" id="next" >Next <i class="fa fa-angle-right"></i></button>
+                                <button class="shadow btn btn-danger" id="next_section" > Next Section <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i></button>
                             </div>
                         </div>
                     </div>   
